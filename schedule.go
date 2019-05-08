@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/boxgo/box/minibox"
-	"github.com/boxgo/kit/logger"
-	"github.com/boxgo/kit/schedule/lock"
+	"github.com/boxgo/logger"
+	"github.com/boxgo/schedule/lock"
 	"github.com/robfig/cron"
 )
 

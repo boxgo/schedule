@@ -1,6 +1,6 @@
 package schedule
 
-import "github.com/boxgo/kit/schedule/lock"
+import "github.com/boxgo/schedule/lock"
 
 type (
 	// Option option set func

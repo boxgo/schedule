@@ -3,8 +3,8 @@ package redis
 import (
 	"time"
 
-	"github.com/boxgo/kit/logger"
-	"github.com/boxgo/kit/redis"
+	"github.com/boxgo/logger"
+	"github.com/boxgo/redis"
 )
 
 type (
