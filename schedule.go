@@ -15,13 +15,13 @@ type (
 	// Schedule 定时任务管理
 	Schedule struct {
 		name        string
-		Type        Type        `config:"type" desc:"Stop: 0, Once: 1, Timing: 2, OnceAndTiming: 3"`
-		LockPrefix  string      `config:"lockPrefix" desc:"Prefix of lock"`
-		LockSeconds uint        `config:"lockSeconds" desc:"Lock ttl"`
-		AutoUnlock  bool        `config:"autoUnlock" desc:"Auto unlock after task finish"`
-		Compete     bool        `config:"compete" desc:"Only winner can exec schedule"`
-		Spec        string      `config:"spec" desc:"Cron spec info"`
-		Args        interface{} `config:"args" desc:"Args"`
+		Type        Type        `config:"type" help:"Stop: 0, Once: 1, Timing: 2, OnceAndTiming: 3"`
+		LockPrefix  string      `config:"lockPrefix" help:"Prefix of lock"`
+		LockSeconds uint        `config:"lockSeconds" help:"Lock ttl"`
+		AutoUnlock  bool        `config:"autoUnlock" help:"Auto unlock after task finish"`
+		Compete     bool        `config:"compete" help:"Only winner can exec schedule"`
+		Spec        string      `config:"spec" help:"Cron spec info"`
+		Args        interface{} `config:"args" help:"Args"`
 		app         minibox.App
 
 		cron          *cron.Cron
