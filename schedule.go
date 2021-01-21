@@ -35,7 +35,7 @@ type (
 	Type int
 
 	// Handler 任务处理器
-	Handler func() error
+	Handler func(sch *Schedule) error
 )
 
 const (
@@ -159,7 +159,7 @@ func (s *Schedule) exec(handler Handler) {
 
 		logger.Default.Infof("Schedule [%s] ready", s.name)
 
-		err := handler()
+		err := handler(s)
 		if err != nil {
 			logger.Default.Errorf("Schedule [%s] error: [%s]", s.name, err.Error())
 		} else {
